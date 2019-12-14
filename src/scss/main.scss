@@ -1,0 +1,166 @@
+$primary-color: #17a2b8;
+$dark-color: #343a40;
+$light-color: #f4f4f4;
+$danger-color: #dc3545;
+$success-color: #28a745;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-break: 1.7;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+p {
+  display: block;
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.nav {
+  background-color: $dark-color;
+  height: 10vh;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-list {
+    display: flex;
+    &-item {
+      margin-right: 4em;
+      color: $light-color;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    color: $light-color;
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+  i {
+    color: $light-color;
+    margin-right: 1em;
+    font-size: 2rem;
+  }
+
+  .logo {
+    display: flex;
+  }
+}
+
+// header
+.header {
+  color: $light-color;
+  width: 100vw;
+  text-align: center;
+  height: 90vh;
+  background-image: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)),
+    url(../img/showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+  align-content: center;
+
+  .desc {
+    font-size: 1.4rem;
+  }
+}
+
+// typography
+.heading-1 {
+  font-size: 5rem;
+  font-weight: normal;
+}
+
+.heading-2 {
+  color: $primary-color;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.btn-primary {
+  display: inline-block;
+  color: $light-color;
+  background-color: $primary-color;
+  padding: 1em 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+}
+.btn-secondary {
+  display: inline-block;
+  color: $primary-color;
+  background-color: $light-color;
+  padding: 1em 2em;
+  margin-top: 2em;
+}
+
+// register
+.register {
+  width: 100vw;
+  height: 100vh;
+
+  .container {
+    padding: 4em;
+  }
+
+  &-title {
+    &-desc {
+      font-size: 2rem;
+    }
+  }
+  .form {
+    &-group {
+      padding: 1em 0em;
+      input {
+        padding: 0.8em 0;
+        padding-left: 0.8em;
+        width: 80%;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.input-btn {
+  cursor: pointer;
+}
